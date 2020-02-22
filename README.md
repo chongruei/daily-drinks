@@ -1,5 +1,7 @@
 ## Daily-drinks
 
+[Demo](https://68mnn.sse.codesandbox.io/)
+
 - order drinks application with response web stie.
 
 #### Requirements
