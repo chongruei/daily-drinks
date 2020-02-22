@@ -1,30 +1,51 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/zeit/next.js/tree/canary/packages/create-next-app).
+## Daily-drinks
 
-## Getting Started
+- order drinks application with response web stie.
 
-First, run the development server:
+#### Requirements
 
-```bash
-npm run dev
-# or
+- Node.js
+- YARN
+
+```javascript
+
+/* First, Install the needed packages */
+yarn
+
+/* Then start both Node and React */
 yarn dev
+
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Component Design
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```javascript
 
-## Learn More
+ProductionList
+  ├── ProductList.js
+  ├── Product.js
 
-To learn more about Next.js, take a look at the following resources:
+ShoppingCart
+  ├── ShoppingCart.js
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/zeit/next.js/) - your feedback and contributions are welcome!
+## Data Flow Services (Global State Management)
 
-## Deploy on ZEIT Now
+```javascript
 
-The easiest way to deploy your Next.js app is to use the [ZEIT Now Platform](https://zeit.co/) from the creators of Next.js.
+Global State
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+cart
+  ├── total
+  ├── products
+
+cart
+  ├── actions.js              # action creators which includes
+  |                           # addProduct
+  |                           # removeProduct
+  |                           # changeProductQuantity
+  ├── actionTypes.js          # plan variety of action type
+  ├── reducer                 # update global state after obtain the new action payload
+
+```
